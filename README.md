@@ -2,8 +2,6 @@
 
 OpenMRSID provides a mechanism for single sign-on known as Multipass.  Multipass uses an AES encrypted JSON hash and node-multipass provides functions for encoding and decoding these tokens.
 
-More details on Multipass can be found [here](https://help.tenderapp.com/kb/setup-installation/share-your-own-sites-authentication-with-tender).
-
 ## Installation
 <pre>
     npm install multipass   //Note: not yet published this package in npm. wait for update soonish

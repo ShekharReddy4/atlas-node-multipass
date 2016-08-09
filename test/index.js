@@ -1,8 +1,11 @@
 var assert = require('assert'),
     Multipass = require('../lib/multipass.js');
 
-var OBJ = { uid: 'burke', shekhar: 'Shekhar', user_email: 'burke.mamlin@openmrs.org', user_name: 'Burke', password: 'mamlin' },
-    TOKEN = '/drm7+JZy8PdpgCY649868/paJbJ/MdaQX3rIFDETnT7M2zuETuItNBtsxrgeEqJo0Rg2bzJkT8DQVo5lVzlqar4Oi4d0OM2ag0n0gZEM1OOoDZfXA0CZ5pqPX6D/Fl1zTMUlXzhISr+d+GgtH7tSqe6Gm5Hxzjl3vTz/SpMrNA=';
+var TOKEN = 'YkTMalVN1YOR0EKw0f2sOqTtjBNr7aJfrq6CnBD1+A5CVrzu/lJVlEvfFqwhui2cxiF2Z2NypDP1idI+5ofUP36vika4LF9DoPBlWC4aIboJbdWuc0OUzmLHNsKzvs9iiLtwiA/XJFLxqxw8iEwY1w==';
+var OBJ = { uid: 'shekhar', user_email: 'shekhar@openmrs.org', user_name: 'ShekharReddy', password: 'shekhar' };
+
+var API_KEY = '1234567890abcdef';
+var SITE_KEY = 'localhost';
 
 describe('multipass', function() {
   
@@ -28,7 +31,7 @@ describe('multipass', function() {
 
     it('should throw an error if site key is not defined', function() {
       try {
-        var multipass = new Multipass('API-KEY');
+        var multipass = new Multipass(API_KEY);
       } catch (e) {
         assert.ok(e instanceof Error);
         assert.equal(e.message, 'Invalid site key');
@@ -37,7 +40,7 @@ describe('multipass', function() {
 
     it('should throw an error if site key is an empty string', function() {
       try {
-        var multipass = new Multipass('API-KEY', '');
+        var multipass = new Multipass(API_KEY, '');
       } catch (e) {
         assert.ok(e instanceof Error);
         assert.equal(e.message, 'Invalid site key');
@@ -47,7 +50,7 @@ describe('multipass', function() {
   });
 
   describe('API', function() {
-    var multipass = new Multipass('API-KEY', 'SITE-KEY');
+    var multipass = new Multipass(API_KEY, SITE_KEY);
   
     it('should expose an `encode` function', function() {
       assert.equal(typeof multipass.encode, 'function');
@@ -60,7 +63,7 @@ describe('multipass', function() {
   });
 
   describe('#encode()', function() {
-    var multipass = new Multipass('1234567890abcdef', 'localhost');
+    var multipass = new Multipass(API_KEY, SITE_KEY);
   
     it('should return undefined if object not passed', function() {
       var token = multipass.encode();
@@ -75,7 +78,7 @@ describe('multipass', function() {
   });
 
   describe('#decode()', function() {
-    var multipass = new Multipass('1234567890abcdef', 'localhost');
+    var multipass = new Multipass(API_KEY, SITE_KEY);
   
     it('should return undefined if token not passed', function() {
       var obj = multipass.decode();
