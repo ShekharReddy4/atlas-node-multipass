@@ -1,11 +1,11 @@
 {
-  "name": "multipass",
-  "description": "Encode and decode Tender Multipass tokens",
-  "version": "1.0.2",
-  "author": "David Wood <bitprobe@gmail.com>",
+  "name": "atlas-node-multipass",
+  "description": "Encode and decode OpenMRSID Multipass tokens",
+  "version": "1.0.0",
+  "author": "Shekhar Reddy <shekharreddy.kmit@gmail.com>",
   "repository": {
       "type": "git",
-      "url": "http://github.com/davidwood/node-multipass" 
+      "url": "https://github.com/ShekharReddy4/atlas-node-multipass"
   },
   "devDependencies": {
     "mocha": "*"
