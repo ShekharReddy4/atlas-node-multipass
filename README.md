@@ -6,7 +6,7 @@ More details on Multipass can be found [here](https://help.tenderapp.com/kb/setu
 
 ## Installation
 <pre>
-    npm install multipass
+    npm install multipass   //Note: not yet published this package in npm. wait for update soonish
 </pre>
 
 ## Usage
