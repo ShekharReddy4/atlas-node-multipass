@@ -10,7 +10,7 @@
   "devDependencies": {
     "mocha": "*"
   },
-  "keywords": ["sso", "tender", "multipass"],
+  "keywords": ["sso", "atlas", "multipass", "OpenMRSID"],
   "main": "./lib/multipass",
   "scripts": {
     "test": "make test"
