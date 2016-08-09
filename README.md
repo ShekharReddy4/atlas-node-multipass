@@ -1,10 +1,9 @@
-# atlas-node-multipass
-
+# atlas-node-multipass [![Build Status](https://travis-ci.org/ShekharReddy4/atlas-node-multipass.svg?branch=master)](https://travis-ci.org/ShekharReddy4/atlas-node-multipass)
 OpenMRSID provides a mechanism for single sign-on known as Multipass.  Multipass uses an AES encrypted JSON hash and node-multipass provides functions for encoding and decoding these tokens.
 
 ## Installation
 <pre>
-    npm install multipass   //Note: not yet published this package in npm. wait for update soonish
+    npm install atlas-node-multipass
 </pre>
 
 ## Usage
@@ -12,7 +11,7 @@ OpenMRSID provides a mechanism for single sign-on known as Multipass.  Multipass
 Multipass is constructed with two arguments: an API key and a site key.
 
 ``` js
-  var Multipass = require('multipass');
+  var Multipass = require('atlas-node-multipass');
 
   // Construct the Multipass encoder / decoder
   var multipass = new Multipass('API-KEY', 'SITE-KEY');
@@ -33,3 +32,5 @@ This function will return a string.  If an error occurs, the `undefined` will be
 ### decode(token)
 
 This function decodes the required `token` argument.  This argument is an encoded Multipass token and a JavaScript object is returned.  If decoding is not successful, `undefined` is returned.
+
+Copyright (c) 2012 David Wood <bitprobe@gmail.com>
