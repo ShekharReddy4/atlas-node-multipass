@@ -1,19 +1,26 @@
 {
   "name": "atlas-node-multipass",
   "description": "Encode and decode OpenMRSID Multipass tokens",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Shekhar Reddy <shekharreddy.kmit@gmail.com>",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/ShekharReddy4/atlas-node-multipass"
+    "type": "git",
+    "url": "https://github.com/ShekharReddy4/atlas-node-multipass"
   },
   "devDependencies": {
     "mocha": "*"
   },
-  "keywords": ["sso", "atlas", "multipass", "OpenMRSID"],
+  "keywords": [
+    "sso",
+    "atlas",
+    "multipass",
+    "OpenMRSID"
+  ],
   "main": "./lib/multipass",
   "scripts": {
     "test": "make test"
   },
-  "engines": { "node": ">= 0.4.0" }
+  "engines": {
+    "node": ">= 0.4.0"
+  }
 }
